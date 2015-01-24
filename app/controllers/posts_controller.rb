@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    set_post
   end
 
   def new
@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
+    set_post
   end
 
   def create
@@ -25,7 +25,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post = Post.find(params[:id])
+    set_post
 
     if @post.update(post_params)
       redirect_to @post
