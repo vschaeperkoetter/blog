@@ -6,7 +6,8 @@
 	<% @posts.each do |post| %>
 	  <div class="post_wrapper">
 	    <h2 class="title"><%= link_to post.title, post %></h2>
-	    <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+	    <h4 class="date"><%= post.created_at.strftime("%B %d, %Y") %></h4>
+	    <p><%= truncate post.body %></p>
 	  </div>
 	<% end %>
 </div>

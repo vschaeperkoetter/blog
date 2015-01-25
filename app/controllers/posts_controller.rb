@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  # before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @posts = Post.all.order('created_at DESC')
@@ -47,7 +48,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.destroy
     
-    redirect_to posts_url, notice: 'Post was successfully deleted.'
+    redirect_to posts_path, notice: 'Post was successfully deleted.'
   end
 
   private
