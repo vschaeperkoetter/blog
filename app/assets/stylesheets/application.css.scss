@@ -30,7 +30,7 @@ a {
 }
 
 #sidebar {
-  width: 250px;
+  width: 20%;
   position: fixed;
   left: 0;
   top: 0;
@@ -46,8 +46,8 @@ a {
   }
   ul {
     list-style: none;
-    text-align: right;
-    padding-right: 3em;
+    text-align: center;
+    // padding-left: 3em;
     .category {
       font-weight: 700;
       font-size: 0.7em;
@@ -104,7 +104,8 @@ a {
 }
 
 #main_content {
-  margin-left: 250px;
+  float: right;
+  width: 80%;
   #header {
     padding: 1em 3em;
     border-bottom: 1px solid #d6dce0;
@@ -256,4 +257,8 @@ input[type="submit"] {
     border: 1px solid #33acb7;
     color: #33acb7;
   }
+}
+
+ul {
+    -webkit-padding-start: 0px;
 }
